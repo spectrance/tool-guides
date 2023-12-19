@@ -1,3 +1,4 @@
-# Files Ignored by Git
+# Files to Ignore while Commiting to the Repo 
 
 *.ipynb
+.ipynb_checkpoints
