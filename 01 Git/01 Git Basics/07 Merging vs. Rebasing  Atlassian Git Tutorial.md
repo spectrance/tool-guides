@@ -31,6 +31,10 @@ git merge main
 
 Or, you can condense this to a one-liner:
 
+```
+git merge feature main
+```
+
 This creates a new “merge commit” in the `feature` branch that ties together the histories of both branches, giving you a branch structure that looks like this:
 
 ![Merging main into feature branch](https://wac-cdn.atlassian.com/dam/jcr:4639eeb8-e417-434a-a3f8-a972277fc66a/02%20Merging%20main%20into%20the%20feature%20branh.svg?cdnVersion=1373)

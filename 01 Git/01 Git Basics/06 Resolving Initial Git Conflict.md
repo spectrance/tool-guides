@@ -11,6 +11,7 @@ jupyter:
     language: python
     name: python3
 ---
+noted from url: https://www.varonis.com/blog/how-to-merge-in-git
 
 <!-- #region jp-MarkdownHeadingCollapsed=true -->
 # Resolving Initial Conflict
