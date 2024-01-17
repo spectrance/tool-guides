@@ -15,7 +15,7 @@ Version control gives us a better handle on the animal of our code base. Every p
 
 New projects must be started either locally or with a new repository on Github. This new repository may be either initialized with files or linked with an existing local directory. Mind the checkbox labelled "Initialize with a README" when creating a new repository (here on out referred to as a **repo**).
 
-[![Mind this checkbox](https://res.cloudinary.com/practicaldev/image/fetch/s---mawpLv2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/yqaw3s7k8qjf968vq0lk.png)](https://res.cloudinary.com/practicaldev/image/fetch/s---mawpLv2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/yqaw3s7k8qjf968vq0lk.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/fccb242b10f693b0d0ff7197a937cdcf_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s---mawpLv2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/yqaw3s7k8qjf968vq0lk.png)
 
 If you have already started a project on your computer you will be "importing an existing repository," so take Github's advice and do *not* check this box. Checking the box will make it more complicated to link your local directory with the remote repo. Instead, "push \[this\] existing repository on the command line" by opening a terminal window, moving into the project's directory, and executing the following three lines:  
 
@@ -31,7 +31,7 @@ If you're starting your project from scratch and have no local work, feel free t
 
 Below is an illustration of the state of our project. The shapes with dashed borders represent the project on the remote repository, while the solid-bordered shapes represent the local project. Each circle is a commit. A huge thanks to the [Learn Git Branching Applet](https://learngitbranching.js.org/) for providing a means of simulating and visualizing Git workflows. We'll use these diagrams to grasp what we're doing.
 
-[![Local synced with remote, two commits](https://res.cloudinary.com/practicaldev/image/fetch/s--gCg1wXKP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/qgkytb8guots0ogsia6q.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--gCg1wXKP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/qgkytb8guots0ogsia6q.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/142d2cc534336424e00f8b2250ecde00_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--gCg1wXKP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/qgkytb8guots0ogsia6q.png)
 
 In the image above, our local repo is synced with the remote repo–both have two commits. The boxes pointing at the commits point to the where (or, more accurately, when) in the project a branch is. Here, the master branch is at the latest commit, C2. The **head** is denoted by the asterisk (\*) indicates where in a project's history we are working. Most often, the head points to the latest checkpoint, like a tape recorder *head* might rest on the freshest spot of tape, or a record player needle might point to the most recent song.
 
@@ -43,11 +43,11 @@ To **stage**, we execute `git add` in our project's directory. Innocuous enough!
 
 To **commit**, we execute `git commit -m "COMMIT MESSAGE` to record the changes made to staged files in our project's git history. Committing is roughly the same thing as saving, though the only thing we're saving is the *changes* to the files, not the files themselves. See [How to Write Useful Commit Messages](https://dev.to/jacobherrington/how-to-write-useful-commit-messages-my-commit-message-template-20n9) for advice on how to do just that. The following illustration shows the state of our project after the previous two commands. Our local project repo is ahead of the remote by one commit!
 
-[![New local commit](https://res.cloudinary.com/practicaldev/image/fetch/s--F0w6MI10--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/5xbbvgkvxou5336d29c8.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--F0w6MI10--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/5xbbvgkvxou5336d29c8.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/fa57e4cae4a3054ca6beb4b484a44934_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--F0w6MI10--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/5xbbvgkvxou5336d29c8.png)
 
 To **push**, we execute `git push`. By default, this command will upload our code in its current branch to a server (known as the *remote* in Git parlance and named `origin` by default). We can specify which branch to push by passing it in as an option like so : `git push REMOTE_NAME BRANCH_NAME`.
 
-[![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s---GX4i_mQ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/rd0o2oq2s3tczod8vfwb.png)](https://res.cloudinary.com/practicaldev/image/fetch/s---GX4i_mQ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/rd0o2oq2s3tczod8vfwb.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/2badc3004dea22bc0db3463a5ad6363b_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s---GX4i_mQ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/rd0o2oq2s3tczod8vfwb.png)
 
 Now our local and remote repos are in sync! With `add`, `commit`, and `push` at our disposal, we're equipped to track changes to our project. Lugging this verbiage around begs the question, *"When will we ever need this?"* Commit *every* substantial change to your work. Commit! Set up your sessions controller? Implementing authorization and just amended your user model? Commit! Fix a bug? Commit!
 
@@ -69,17 +69,17 @@ Branching in Git is as simple as `git branch BRANCH_NAME`. This command creates 
 
 Once we've created a branch, we can save our progress with `add` and `commit` as usual. Remember that executing `git push` will upload our project as it exists in the last commit in the current branch. The diagram below shows the state of our project after doing all of the above. Note the location of the asterisk! It is on *account-m* on account of us being in that particular branch.
 
-[![Creating a new branch, committing and pushing](https://res.cloudinary.com/practicaldev/image/fetch/s--fCWW2kA5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/x38e8dyyccaxcrk3wd47.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--fCWW2kA5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/x38e8dyyccaxcrk3wd47.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/dae7cbc6730ea5ee78e43037e8177538_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--fCWW2kA5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/x38e8dyyccaxcrk3wd47.png)
 
 The image above shows the `master` branch pointing to an earlier commit than the `account-m` branch. Since we've committed in `account-m`, `master` is behind! When the purpose of a feature branch has been fulfilled and its quality is satisfactory, it's time to **merge** that branch back into the `master` branch. Intuitively enough, we accomplish this feat with `git merge`.
 
 First, we checkout the master branch, then we execute `git merge BRANCH_NAME`.
 
-[![Checking out the master branch](https://res.cloudinary.com/practicaldev/image/fetch/s--JhOeVs_9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/7odwx9sa24dxxib7jxki.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--JhOeVs_9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/7odwx9sa24dxxib7jxki.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/e7f718e88a8924f9a26f056529cc80e9_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--JhOeVs_9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/7odwx9sa24dxxib7jxki.png)
 
 Notice the location of the asterisk! We're now in the master branch. Now merge the `account-model` branch and push our changes to remote.
 
-[![Checking out the master branch, merging the other branch, and pushing](https://res.cloudinary.com/practicaldev/image/fetch/s--fQmMH-fn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/ljwc5n51dufc9sab9lig.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--fQmMH-fn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/ljwc5n51dufc9sab9lig.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/da2a6cf17817a5827b08923f245e22ad_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--fQmMH-fn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/ljwc5n51dufc9sab9lig.png)
 
 In short, we've accomplished the following...:
 
@@ -96,19 +96,19 @@ We now know how to save our progress and to create progress in a safe place befo
 
 Say we're working with someone else on this project. They are going to, say, flesh out the controller for the accounts model we created previously. They go off, clone (aka download) our repository, work, faithfully commit, and push their changes to remote. If we want to see their work on *our* machine, we need to **pull** what is on the remote, with `git pull`.
 
-[![Pulling a partner's woork](https://res.cloudinary.com/practicaldev/image/fetch/s--ezgRZEWP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/bho0ukc57vuc63pm2z8d.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--ezgRZEWP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/bho0ukc57vuc63pm2z8d.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/7ac84eb7036bc58db8c1e69a6ecb68ac_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--ezgRZEWP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/bho0ukc57vuc63pm2z8d.png)
 
 Notice that the asterisk is on the master branch, two commits behind our colleague's branch. Our colleague isn't quite done yet, so we decide to work on a separate feature on a separate branch. We do so, and make a couple commits' worth of progress.
 
-[![Making our own progress](https://res.cloudinary.com/practicaldev/image/fetch/s--3mkh4B2v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/tl41kb49mhbhungntgzo.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--3mkh4B2v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/tl41kb49mhbhungntgzo.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/33c94dd96114ebf1fcf32d4ff6ef8112_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--3mkh4B2v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/tl41kb49mhbhungntgzo.png)
 
 In the meantime, our colleague finished and pushed their last commit for their branch. We promptly pull it to stay abreast.
 
-[![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s--YN04GJrh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/uyuth572i203iq7bnncd.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--YN04GJrh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/uyuth572i203iq7bnncd.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/110b77f07a9a61547fa0d5b821caa326_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--YN04GJrh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/uyuth572i203iq7bnncd.png)
 
 We finish with our work, and decide it's time to put everything together, merging and (of course!) pushing the result to the remote so our team can work from it.
 
-[![Merging everyone's work](https://res.cloudinary.com/practicaldev/image/fetch/s--1vXeMVta--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/b6tyu5wxl32gsncn0xt1.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--1vXeMVta--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/b6tyu5wxl32gsncn0xt1.png)
+[![[01 Tool Guides/01 Git/01 Git Basics/_resources/03 A Simple Git Branch Workflow - DEV Community/fed519393f00cd11d59c63cc8f580ac3_MD5.png]]](https://res.cloudinary.com/practicaldev/image/fetch/s--1vXeMVta--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/b6tyu5wxl32gsncn0xt1.png)
 
 This process is the basic unit of a Git branching workflow. Each member of a team project works on a branch appropriate to a particular feature, component, or variation of the project. Commits are made and pushed with every milestone. When a particular branch has served its purpose and is ready for the big time, it is merged into the master branch. And on and on it goes!
 

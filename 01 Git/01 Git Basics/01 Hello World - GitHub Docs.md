@@ -28,7 +28,7 @@ Your `hello-world` repository can be a place where you store ideas, resources, o
 
 1.  In the upper-right corner of any page, select , then click **New repository**.
     
-    ![Screenshot of a GitHub dropdown menu showing options to create new items. The menu item "New repository" is outlined in dark orange.](https://docs.github.com/assets/cb-34248/images/help/repository/repo-create-global-nav-update.png)
+    ![[01 Tool Guides/01 Git/01 Git Basics/_resources/01 Hello World - GitHub Docs/80ff31e4a5542fcf0fc41fb2ea5fea2a_MD5.png]]
     
 2.  In the "Repository name" box, type `hello-world`.
     
@@ -55,7 +55,7 @@ This diagram shows:
 -   A new branch called `feature`
 -   The journey that `feature` takes before it's merged into `main`
 
-![Diagram of the two branches. The "feature" branch diverges from the "main" branch, goes through stages for "Commit changes," "Submit pull request," and "Discuss proposed changes," and is then merged back into main.](https://docs.github.com/assets/cb-23923/images/help/repository/branching.png)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/01 Hello World - GitHub Docs/903c096725c3ac292a59681bc3912654_MD5.png]]
 
 Have you ever saved different versions of a file? Something like:
 
@@ -73,13 +73,13 @@ Here at GitHub, our developers, writers, and designers use branches for keeping 
     
 2.  Above the file list, click the dropdown menu that says **main**.
     
-    ![Screenshot of the repository page. A dropdown menu, labeled with a branch icon and "main", is highlighted with an orange outline.](https://docs.github.com/assets/cb-19635/images/help/branches/branch-selection-dropdown-global-nav-update.png)
+    ![[01 Tool Guides/01 Git/01 Git Basics/_resources/01 Hello World - GitHub Docs/1dca18ce7a4a2f8efaa6b81407531418_MD5.png]]
     
 3.  Type a branch name, `readme-edits`, into the text box.
     
 4.  Click **Create branch: readme-edits from main**.
     
-    ![Screenshot of the branch dropdown for a repository. "Create branch: readme-edits from 'main'" is outlined in dark orange.](https://docs.github.com/assets/cb-31026/images/help/repository/new-branch.png) Now you have two branches, `main` and `readme-edits`. Right now, they look exactly the same. Next you'll add changes to the new branch.
+    ![[01 Tool Guides/01 Git/01 Git Basics/_resources/01 Hello World - GitHub Docs/6f55334cfd4a8442779bc5da59eae32b_MD5.png]] Now you have two branches, `main` and `readme-edits`. Right now, they look exactly the same. Next you'll add changes to the new branch.
     
 
 ## [Making and committing changes](https://docs.github.com/en/get-started/quickstart/hello-world#making-and-committing-changes)
@@ -117,7 +117,7 @@ You can even open pull requests in your own repository and merge them yourself. 
     
 4.  Look over your changes in the diffs on the Compare page, make sure they're what you want to submit.
     
-    ![Screenshot of a diff for the README.md file. 3 red lines list the text that's being removed, and 3 green lines list the text being added.](https://docs.github.com/assets/cb-32937/images/help/repository/diffs.png)
+    ![[01 Tool Guides/01 Git/01 Git Basics/_resources/01 Hello World - GitHub Docs/a774415b0af47289dd2387a617a659c4_MD5.png]]
     
 5.  Click **Create pull request**.
     

@@ -41,7 +41,7 @@ First, you create a pull request from your branch to the main branch. You merge
 
 Because the main branch hasn't been touched since the start, and you both were working with entirely separate files, there are no conflicts. Your teammate submits a pull request on main and merges their lib branch with main. The main branch now has both your code for the user interface and their code for the database.
 
-![git branch/merge workflow example](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/basic-2branch-example.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/8859cbe4d5d46ba9be7c23f89aa77a56_MD5.webp]]
 
 Now that the main branch has both developers' code, you each can run local pull requests and get each other's new files onto your local machines. You see how the code interacts and perhaps implement your teammate's functions in your forms.
 
@@ -51,13 +51,13 @@ On small teams, it may be sufficient for each developer to work on their own bra
 
 If you're working on a solo project, you can still use branches to help you keep track of things. This can be useful if you're working on an experimental feature and don't want to break your working stable codebase on the main branch.
 
-![solo dev branch workflow](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/solo-dev-branch-workflow.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/033ec72a2d752d10d70b558aee2c7030_MD5.webp]]
 
 Depending on the needs of your project, your branches can become quite complex.
 
 Here's a visual example of a more complex branch history. In this example, multiple features are being worked on at once, and the B branch is further divided into more branches before everything is merged back together. The dev branch is where most of the production occurs. When dev is merged with main, a new version of the app is released. Finally, between the first and second release, an error was found which needed to be fixed immediately. So a "hotfix" was made and merged back into main and dev, before the latest release.
 
-![multiple branches and subbranches](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/even-more-complex.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/af3f82ecafb950d8d5c9d21acb0c515f_MD5.webp]]
 
 ## Creating and Merging Branches
 
@@ -78,7 +78,7 @@ Now that the main branch is ready, it's time to work on a second branch.
 
 You can see what branch you're on at any time by typing `git branch` in the terminal.
 
-![git status git branch](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-status-git-branch.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/5e685ad6d166693355c80d435a8dc963_MD5.webp]]
 
 Now I want to make a new "dev" branch based on the main branch before I work on anything else.
 
@@ -87,7 +87,7 @@ git branch
 
 Now I've created my dev branch. However, typing "git branch" shows me I'm still on the main branch.
 
-![git branch dev main](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-branch-dev-main.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/b863dcb19224c06e6c6056f0aca5a3ce_MD5.webp]]
 
 To quickly switch branches, use the checkout command.
 
@@ -97,13 +97,13 @@ The branch information now shows I'm on the local dev branch.
 
 git branch
 
-![git checkout dev git branch](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-checkout-dev-git-branch.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/c48149204a995572f2c85ef01097bc16_MD5.webp]]
 
 Another, slightly quicker to create a new branch and switch to it in one step is to use the checkout command with the -b flag. This will create the new branch based on the one you're currently on, then switch to the new one (don't do this if you already followed the last 2 steps).
 
 git checkout -b dev
 
-![git checkout b dev](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-branch-checkout-b-dev.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/109968045a65f689055a454538ca481d_MD5.webp]]
 
 I haven't touched the remote repo yet. I need to update the remote (upstream) repo on GitHub.
 
@@ -115,15 +115,15 @@ Since I'm pushing somewhere that's not main, I explicitly told Git where I was t
 
 Optionally, run a `git status` to verify you're on the dev branch and you're tracking the new remote origin/dev branch.
 
-![git push u origin dev](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-push-u-origin-dev.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/413b9fe0d0a388af4bcce0526e84b586_MD5.webp]]
 
 When I view the repo on GitHub, I can see I now have two branches - main and dev. For now, they're identical. I'm ready to use this as a starting point to add new files and features.
 
-![git dev branch on github](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-dev-branch-on-github.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/78384486eba5c1a06faf7098a3dae18f_MD5.webp]]
 
 Next, I'll create a few new files on my local dev branch.
 
-![added new files to dev](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/added-new-files-to-dev.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/4a9cdd11b1b936cf74943e7cb0a1dd14_MD5.webp]]
 
 Now I can create a new commit and push the files to the server. So I use the git add, commit, and push functions.
 
@@ -133,21 +133,21 @@ git push
 
 Since I'm already connected to the dev branch of the remote repo, I don't need to type out the full "git push -u origin dev" like before. I can get away with just typing git push. However, the full command would have worked as well.
 
-![push updated to dev](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/push-updated-to-dev.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/ab90f5f51a8c2236257758ea103108b7_MD5.webp]]
 
 At this point I have two branches, main and dev. I'm on the dev branch, and it has 2 new files that the main branch does not have. If I look at the files in my file explorer, or in VS Code's explorer, I see all the new files are present.
 
-![fileexplorer dev files present](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/fileexplorer-dev-files-present.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/0e0d456f18a493345fb5cd3a5ac653ed_MD5.webp]]
 
 Remember, foremost Git is a file tracking and versioning tool. I can swap between copies of my local branches at any time. When I run `git checkout main` the files in my folder reflect this. The two new files disappear (if they do not disappear, you may need to refresh the directory with F5 key).
 
-![git checkout main file diff](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-checkout-main-file-diff.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/ce0eaf82e688563a8f440b84fae42603_MD5.webp]]
 
 I can switch back to dev again, and the files reappear.
 
 git checkout dev
 
-![git checkout switch back to dev](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-checkout-switch-back-to-dev.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/f39a85a4d956ee76174a14aefe20a95c_MD5.webp]]
 
 Take a look at the repo on GitHub. I've switched to the dev branch with the dropdown.
 
@@ -155,25 +155,25 @@ I can see the files have been added. Additionally, it says that "This branch is 
 
 Now go to the branches page by clicking the "Branches" link just below the dropdown.
 
-![github files in dev](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/github-files-in-dev.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/789e1b98a11f7f847fce486062da86f5_MD5.webp]]
 
 The branches page gives you an overview of all the branches in the repo. You can narrow it down by active branches, old (stale) branches, your branches, and so on. You can also create new branches directly from GitHub.
 
 I'd like to get more info about the dev branch, so click the branch activity button towards the right.
 
-![branches page](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/branches-page.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/e01f61960ce21212ad2ec130ae42d3ee_MD5.webp]]
 
 This takes us to the branch activity page, where we can see all the commits to this branch.
 
 Open the submenu next to the latest commit and click compare changes.
 
-![branch activity page](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/branch-activity-page.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/f84d028320d2dd620b83cd3492423557_MD5.webp]]
 
 When we are on the comparing changes page, we can see the differences between two branches, or between two individual commits. In this case, it's comparing the specifically chosen commit with the main branch.
 
 You can use the dropdowns to compare changes between any branches.
 
-![branch comparison](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/branch-comparison.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/8a17471e64c000cea21a7c4a16fd11b5_MD5.webp]]
 
 After reviewing the files, I've decided I'm ready to add them to the main branch.
 
@@ -181,7 +181,7 @@ To do this on GitHub, I need to create a pull request. A **pull request** is a t
 
 The latest change is already linked at the top in a notification. Click "compare & pull request" - this notification was likely also on the front page of your repo.
 
-![pull requests page](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/pull-requests-page.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/250ca0a9de094b2ba2af95eb1ab5d72b_MD5.webp]]
 
 The pull request creation page allows us to see what branches we want to merge, comment on the changes, and if you scroll down, you'll see the changed files and commit history.
 
@@ -189,21 +189,21 @@ In green, towards the top, it says the branches are able to merge. This means th
 
 Create the pull request.
 
-![open pull request](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/open-pull-request.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/61f1a9889870ec2ccece3e63408b30fe_MD5.webp]]
 
 Once the request is created, you'll be redirected to the new request. Here you can see your comment, review the files again, and see any of your collaborators' comments.
 
 If everything looks right, you can click "Merge pull request" to merge the branches. Remember that depending on the permissions given to you, you might not be able to merge things yourself. If you have senior team members, they'd likely be the ones reviewing and approving the merge. Since this is our own project, we can just finish the merge ourselves.
 
-![view pull request](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/view-pull-request.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/3374a9153fa58dd6099a789e684e8639_MD5.webp]]
 
 After confirming, the merge should be complete. You'll see the request was closed and you can delete the branch. In most workflows, you delete the branch at this point, so do that.
 
-![pull request success](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/pull-request-success.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/e46e8e6ad951407f305d5faef6117b35_MD5.webp]]
 
 Look at the commit history for the main branch of the repo. Remember, each time a merge is completed, a commit is created with the sum of the merges.
 
-![GitHub commit history after merge](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-commit-history-after-merge.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/259d63cb68f58994aef3d522b86ffce5_MD5.webp]]
 
 ### Local Merge
 
@@ -232,7 +232,7 @@ git show head
 
 Running this command should show you the current HEAD commit, including the details, message, and branch.
 
-![git show head](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/git-show-head.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/feed00ed66610ce77aee8543dfae6745_MD5.webp]]
 
 ## After The Merge
 
@@ -240,7 +240,7 @@ Many things can happen with projects between the time you first branch out your 
 
 A common scenario might involve another developer merging the changes from their branch into main after you branch out, but before you merge back in. If there are no file conflicts, the remote repository will simply have both of your changes. However, your local repository will not be up to date.
 
-![2 devs pull new changes](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/2-devs-pull-new-changes.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/d4d3fd262fcfc46a1805d8c5db96c245_MD5.webp]]
 
 You need to make sure you run a pull request after merging the remote branches.
 
@@ -288,13 +288,13 @@ If you over-commit, you can run into a situation where you're cluttering up your
 
 Here's an example of a cluttered commit history.
 
-![too many commits](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/too-many-commits.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/0a16cf2b332d2ba3ee6c4860391910d9_MD5.webp]]
 
 One easy way to remedy this is with the "rebase" command.
 
 In a nutshell, rebase allows you to change your commit history. You're taking the base of one commit and sticking it somewhere else, rewriting the commit history in the process.
 
-![merge vs rebase](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/merge-vs-rebase.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/88073ad8655930ad67452d8b654c7df8_MD5.webp]]
 
 While the difference between a merge and a rebase may look similar, there are some very important differences.
 
@@ -318,7 +318,7 @@ Again, you probably won't use rebase to merge things on public repos. I like to 
 
 Suppose you're on a development branch and you want to squash your last three commits together. Currently, your commit log looks like this:
 
- ![3 redundant commits](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/3-redundant-commits.webp)
+ ![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/7fa74007dec5d159d0fb631f2b1b643b_MD5.webp]]
 
 The first commit was the most important. I was writing imaginary documentation. Then, I went back and noticed some typos, so I fixed the typos on separate commits.
 
@@ -332,13 +332,13 @@ This will open some more advanced rebase features in VS Code, or whichever edito
 
 Since I specified 3 after HEAD~ - the last 3 commits are displayed at the top of the document. It shows their SHA (secure hash algo - their ID), and the message.
 
-![rebase i](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/rebase-i.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/78742456d9b69b28c6f3a9cf4a0db53f_MD5.webp]]
 
 Change the pick commands to squash for everything after the first. As it says below, the squash command uses the commit, but melds it into the previous. We want to meld the second and third commit into the first.
 
 After doing this, save and close the file.
 
-![change to squash](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/change-to-squash.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/17a4b0b6de9b433bd922db2f206b2334_MD5.webp]]
 
 This should almost immediately open another file, where you can confirm the change and see the message.
 
@@ -348,6 +348,6 @@ I usually just type my new commit message at the top and save it. This will reta
 
 If you want to use a new commit message and get rid of the old ones, just delete the contents of the whole file and type your new message. Click the little checkmark in the upper right when you're done editing your commit message.
 
-![commit editmsg](https://kevinsguides.com/images/seriescontent/coding/devops/filemgmt/github-merges-conflicts-workflow/commit-editmsg.webp)
+![[01 Tool Guides/01 Git/01 Git Basics/_resources/04 Git & GitHub Workflow, Branches, Merges, & More/2138b310ef0d868bfcc20fb2e031041a_MD5.webp]]
 
 If everything went according to plan, you should see a message saying the rebase was successful. Now, instead of having 3 ugly commits, I have a single commit that sums up the three. I now can push this change to GitHub and merge it with other branches without worrying about judgement or making work harder on other people.

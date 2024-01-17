@@ -65,6 +65,4 @@ As you can see, Git makes it easy to delete commits from a remote server.
 
 However, you need to be careful when using the `git push` command with the `force` option because you could lose progress if you are not cautious.
 
-![[_resources/How to Delete Commits From Remote in Git  HackerNoon/7c0468a65b11fa22737726364a0ece63_MD5.gif]]
-
 Thank you for reading!
