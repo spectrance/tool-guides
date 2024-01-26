@@ -33,7 +33,7 @@ Each commit has a unique SHA-1 identifying hash. These IDs are used to travel th
 
 When you have found a commit reference to the point in history you want to visit, you can utilize the `git checkout` command to visit that commit. `Git checkout` is an easy way to “load” any of these saved snapshots onto your development machine. During the normal course of development, the `HEAD` usually points to `main` or some other local branch, but when you check out a previous commit, `HEAD` no longer points to a branch—it points directly to a commit. This is called a “detached `HEAD`” state, and it can be visualized as the following:
 
-![[_resources/06 Undoing Changes in Git  Atlassian Git Tutorial/75958a8cc0067a4d2b41021fb884bcd7_MD5.svg]]
+![[_resources/01 Undoing Changes in Git  Atlassian Git Tutorial/75958a8cc0067a4d2b41021fb884bcd7_MD5.svg]]
 
 Checking out an old file does not move the `HEAD` pointer. It remains on the same branch and same commit, avoiding a 'detached head' state. You can then commit the old version of the file in a new snapshot as you would any other changes. So, in effect, this usage of `git checkout` on a file, serves as a way to revert back to an old version of an individual file. For more information on these two modes visit the [git checkout](https://www.atlassian.com/git/tutorials/using-branches/git-checkout) page
 

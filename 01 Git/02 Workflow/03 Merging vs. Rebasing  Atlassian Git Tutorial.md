@@ -16,7 +16,7 @@ Or, you can condense this to a one-liner:
 
 This creates a new “merge commit” in the `feature` branch that ties together the histories of both branches, giving you a branch structure that looks like this:
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/519655b3269068903850d13f1aeec0cb_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/519655b3269068903850d13f1aeec0cb_MD5.svg]]
 
 Merging is nice because it’s a *non-destructive* operation. The existing branches are not changed in any way. This avoids all of the potential pitfalls of rebasing (discussed below).
 
@@ -33,7 +33,7 @@ git rebase main
 
 This moves the entire `feature` branch to begin on the tip of the `main` branch, effectively incorporating all of the new commits in `main`. But, instead of using a merge commit, rebasing *re-writes* the project history by creating brand new commits for each commit in the original branch.
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/167c5dd1d1426c92239cf69b9ecfd501_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/167c5dd1d1426c92239cf69b9ecfd501_MD5.svg]]
 
 The major benefit of rebasing is that you get a much cleaner project history. First, it eliminates the unnecessary merge commits required by `git merge`. Second, as you can see in the above diagram, rebasing also results in a perfectly linear project history—you can follow the tip of `feature` all the way to the beginning of the project without any forks. This makes it easier to navigate your project with commands like `git log`, `git bisect`, and `gitk`.
 
@@ -68,7 +68,7 @@ pick 5c67e61 Message for commit #3
 
 When you save and close the file, Git will perform the rebase according to your instructions, resulting in project history that looks like the following:
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/4d19aafa41ec6c17a6b330cb59e16126_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/4d19aafa41ec6c17a6b330cb59e16126_MD5.svg]]
 
 Eliminating insignificant commits like this makes your feature’s history much easier to understand. This is something that `git merge` simply cannot do.
 
@@ -78,7 +78,7 @@ Once you understand what rebasing is, the most important thing to learn is when 
 
 For example, think about what would happen if you rebased `main` onto your `feature` branch:
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/5a23d2ed32f37bd1e685bfe47ec80fb5_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/5a23d2ed32f37bd1e685bfe47ec80fb5_MD5.svg]]
 
 The rebase moves all of the commits in `main` onto the tip of `feature`. The problem is that this only happened in *your* repository. All of the other developers are still working with the original `main`. Since rebasing results in brand new commits, Git will think that your `main` branch’s history has diverged from everybody else’s.
 
@@ -104,7 +104,7 @@ Rebasing can be incorporated into your existing Git workflow as much or as littl
 
 The first step in any workflow that leverages `git rebase` is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing:
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/3f5b308097ec506729d649e20c6e9303_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/3f5b308097ec506729d649e20c6e9303_MD5.svg]]
 
 ### Local cleanup
 
@@ -118,7 +118,7 @@ git checkout feature git rebase -i HEAD~3
 
 By specifying `HEAD~3` as the new base, you’re not actually moving the branch—you’re just interactively re-writing the 3 commits that follow it. Note that this will *not* incorporate upstream changes into the `feature` branch.
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/f674ccc8d6acc1e86c7a5e0da498f230_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/f674ccc8d6acc1e86c7a5e0da498f230_MD5.svg]]
 
 If you want to re-write the entire feature using this method, the `git merge-base` command can be useful to find the original base of the `feature` branch. The following returns the commit ID of the original base, which you can then pass to `git rebase`:
 
@@ -142,11 +142,11 @@ Keep in mind that it’s perfectly legal to rebase onto a remote branch instead 
 
 For example, if you and another developer named John added commits to the `feature` branch, your repository might look like the following after fetching the remote `feature` branch from John’s repository:
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/4d2d51c548def6e6eba7fa429c38c569_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/4d2d51c548def6e6eba7fa429c38c569_MD5.svg]]
 
 You can resolve this fork the exact same way as you integrate upstream changes from `main`: either merge your local `feature` with `john/feature`, or rebase your local `feature` onto the tip of `john/feature`.
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/2c0f0e211031b58fefdd88f310c544b0_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/2c0f0e211031b58fefdd88f310c544b0_MD5.svg]]
 
 Note that this rebase doesn’t violate the *Golden Rule of Rebasing* because only your local `feature` commits are being moved—everything before that is untouched. This is like saying, “add my changes to what John has already done.” In most circumstances, this is more intuitive than synchronizing with the remote branch via a merge commit.
 
@@ -166,7 +166,7 @@ After a feature has been approved by your team, you have the option of rebasing 
 
 This is a similar situation to incorporating upstream changes into a feature branch, but since you’re not allowed to re-write commits in the `main` branch, you have to eventually use `git merge` to integrate the feature. However, by performing a rebase before the merge, you’re assured that the merge will be fast-forwarded, resulting in a perfectly linear history. This also gives you the chance to squash any follow-up commits added during a pull request.
 
-![[_resources/05 Merging vs. Rebasing  Atlassian Git Tutorial/d898bce5cca9d605a4af7d7f62e21d44_MD5.svg]]
+![[_resources/03 Merging vs. Rebasing  Atlassian Git Tutorial/d898bce5cca9d605a4af7d7f62e21d44_MD5.svg]]
 
 If you’re not entirely comfortable with `git rebase`, you can always perform the rebase in a temporary branch. That way, if you accidentally mess up your feature’s history, you can check out the original branch and try again. For example:
 
