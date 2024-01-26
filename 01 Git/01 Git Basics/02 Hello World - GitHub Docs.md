@@ -55,7 +55,7 @@ This diagram shows:
 -   A new branch called `feature`
 -   The journey that `feature` takes before it's merged into `main`
 
-![[_resources/01 Hello World - GitHub Docs/903c096725c3ac292a59681bc3912654_MD5.png]]
+![[_resources/02 Hello World - GitHub Docs/903c096725c3ac292a59681bc3912654_MD5.png]]
 
 Have you ever saved different versions of a file? Something like:
 
@@ -73,13 +73,13 @@ Here at GitHub, our developers, writers, and designers use branches for keeping 
     
 2.  Above the file list, click the dropdown menu that says **main**.
     
-    ![[_resources/01 Hello World - GitHub Docs/1dca18ce7a4a2f8efaa6b81407531418_MD5.png]]
+    ![[_resources/02 Hello World - GitHub Docs/1dca18ce7a4a2f8efaa6b81407531418_MD5.png]]
     
 3.  Type a branch name, `readme-edits`, into the text box.
     
 4.  Click **Create branch: readme-edits from main**.
     
-    ![[_resources/01 Hello World - GitHub Docs/6f55334cfd4a8442779bc5da59eae32b_MD5.png]] Now you have two branches, `main` and `readme-edits`. Right now, they look exactly the same. Next you'll add changes to the new branch.
+    ![[_resources/02 Hello World - GitHub Docs/6f55334cfd4a8442779bc5da59eae32b_MD5.png]] Now you have two branches, `main` and `readme-edits`. Right now, they look exactly the same. Next you'll add changes to the new branch.
     
 
 ## [Making and committing changes](https://docs.github.com/en/get-started/quickstart/hello-world#making-and-committing-changes)
@@ -117,7 +117,7 @@ You can even open pull requests in your own repository and merge them yourself. 
     
 4.  Look over your changes in the diffs on the Compare page, make sure they're what you want to submit.
     
-    ![[_resources/01 Hello World - GitHub Docs/a774415b0af47289dd2387a617a659c4_MD5.png]]
+    ![[_resources/02 Hello World - GitHub Docs/a774415b0af47289dd2387a617a659c4_MD5.png]]
     
 5.  Click **Create pull request**.
     

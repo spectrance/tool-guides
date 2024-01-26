@@ -209,7 +209,7 @@ This command is particularly useful when you use branch references as the parame
 
 The `main..feature` range contains all of the commits that are in the `feature` branch, but aren’t in the `main` branch. In other words, this is how far `feature` has progressed since it forked off of `main`. You can visualize this as follows:
 
-![[_resources/10 Advanced Git Log  Atlassian Git Tutorial/c2e203f965519a5cb40c3eb76233c3fa_MD5.svg]]
+![[_resources/05 Advanced Git Log  Atlassian Git Tutorial/c2e203f965519a5cb40c3eb76233c3fa_MD5.svg]]
 
 Note that if you switch the order of the range (`feature..main`), you will get all of the commits in `main`, but not in `feature`. If `git log` outputs commits for both versions, this tells you that your history has diverged.
 
